@@ -20,7 +20,7 @@ To Create a VPC, we follow these steps:
 2. In the Dashboard, select **Ctreate VPC**
 ![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/eb635546-db5f-4c15-b5a0-549d8e1edd1a)
 
-3. Select **VPC and more** under **Resources to create**
+3. Select **VPC and more** under **Resources to create**.
 **Note:**There are two options to choose from, **VPC Only** and **VPC and more**.
 - **VPC Only:** Creating only the VPC (Virtual Private Cloud) resource typically involves setting up the fundamental networking infrastructure for your cloud environment.
 - **VPC and more:**  creating the VPC along with other networking resources involves setting up additional components to enhance the functionality and connectivity of your cloud environment. These additional networking resources may include: Subnets, Route tables, Internet Gateways, Nat Gateways or Nat Instances, Elastic Load Balancers (ELBs) which wwe will be creating, and etc.
@@ -31,9 +31,16 @@ To Create a VPC, we follow these steps:
 
 5. Under **IPv4 CIDR block** and **IPv6 CIDR block** select 10.0.0.0/16 IPV4 and No IPv6 CIDR block, respectively.
   Note: Selecting IPV4 10.0.0.0/16 gives us access to 65,536 IPs.
-6. Leave Tenancy on **Default**
+6. Leave Tenancy on **Default**. 
 
 ![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/cac813b4-922e-4124-b1bb-d9901f4deea8)
+
+7. Set Number of Availability Zones (AZs), Number of public subnets, and Number of private subnets all to **2**
+![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/3d9e7845-d6b6-4afa-8bed-666e55bdd44b)
+
+8.                                                   
+
+
 
 
 
