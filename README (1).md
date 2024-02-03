@@ -32,6 +32,7 @@ To Create a VPC, we follow these steps:
 5. Under **IPv4 CIDR block** and **IPv6 CIDR block** select 10.0.0.0/16 IPV4 and No IPv6 CIDR block, respectively.
   Note: Selecting IPV4 10.0.0.0/16 gives us access to 65,536 IPs.
 6. Leave Tenancy on **Default**
+
 ![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/cac813b4-922e-4124-b1bb-d9901f4deea8)
 
 
