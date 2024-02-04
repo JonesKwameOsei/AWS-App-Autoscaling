@@ -15,18 +15,22 @@ Amazon **Virtual Private Cloud** or **Amazon VPC** is a logicaly isolated **virt
 
 To Create a VPC, we follow these steps:
 1. In the AWS console, search for VPC in the search bar and click on it to open the VPC dashboard
+
 ![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/1bb6a2d8-8ce1-41dd-8e99-08eeae7f37b2)
 
 2. In the Dashboard, select **Ctreate VPC**
+
 ![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/eb635546-db5f-4c15-b5a0-549d8e1edd1a)
 
 3. Select **VPC and more** under **Resources to create**.
 **Note:**There are two options to choose from, **VPC Only** and **VPC and more**.
 - **VPC Only:** Creating only the VPC (Virtual Private Cloud) resource typically involves setting up the fundamental networking infrastructure for your cloud environment.
 - **VPC and more:**  creating the VPC along with other networking resources involves setting up additional components to enhance the functionality and connectivity of your cloud environment. These additional networking resources may include: Subnets, Route tables, Internet Gateways, Nat Gateways or Nat Instances, Elastic Load Balancers (ELBs) which wwe will be creating, and etc.
+
 ![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/b8f35a52-21a6-41bc-9864-fe3d297e6159)
 
 4. Enter a name for the VPC to be created under **Name tag auto-generation**.
+
 ![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/31557bfd-b8cb-4fe9-a572-91a5a6717eb8)
 
 5. Under **IPv4 CIDR block** and **IPv6 CIDR block** select 10.0.0.0/16 IPV4 and No IPv6 CIDR block, respectively.
@@ -36,6 +40,7 @@ To Create a VPC, we follow these steps:
 ![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/cac813b4-922e-4124-b1bb-d9901f4deea8)
 
 7. Set Number of Availability Zones (AZs), Number of public subnets, and Number of private subnets all to **2**.
+
 ![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/3d9e7845-d6b6-4afa-8bed-666e55bdd44b)
 
 8. Set NAT Gateway, select **In 1 AZ** (Note that there is a charge for each NAT gateway).
