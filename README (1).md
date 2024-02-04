@@ -147,9 +147,9 @@ Launch Template created! Click **View Launch Template**
 
 # Create Target Group 
 A target group is responsible for directing requests to the web servers we establish. The load balancer relies on this target group to determine the specific set of servers to distribute traffic to. Additionally, our auto scaling group will be linked to this target group, ensuring that it launches our servers into the designated target group. <p>
-1. Click on Create target group from the EC2 console to create a target group <p>
+1. Click on Create target group from the EC2 console to create a target group <p><p>
 ![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/5f94235d-ee9c-48a1-9630-5ff318f347ce) <p>
-2. Choose a target type: **Instances**.<p>
+2. Choose a target type: **Instances**.<p><p>
 ![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/7b1aa053-65ef-43b9-9c14-d115480d69ab) <p>
 3. Target group name: **app-autoscale-webserver** 
 4. Protocol: **HTTP**
@@ -158,7 +158,7 @@ A target group is responsible for directing requests to the web servers we estab
 7. We will leave every other value on this page as default. <p><p>
 ![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/2a50e04d-a3e5-4f6b-993d-d39584b61dfe) <p>
 
-8. Click **Next**
+8. Click **Next**<p>
 ![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/025df5a2-6f24-4339-805f-09bc27f29f5f) <p>
 
 9. Register Targets: Leave as is.<p>
