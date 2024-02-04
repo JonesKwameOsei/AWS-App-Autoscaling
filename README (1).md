@@ -19,8 +19,7 @@ To Create a VPC, we follow these steps:
 ![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/1bb6a2d8-8ce1-41dd-8e99-08eeae7f37b2)
 
 1a. Resource tags: Key: Name, Value: autoscale-webserver.
-
-2. In the Dashboard, select **Ctreate VPC**
+2. In the Dashboard, select **Ctreate VPC**. <p>
 
 ![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/eb635546-db5f-4c15-b5a0-549d8e1edd1a)
 
