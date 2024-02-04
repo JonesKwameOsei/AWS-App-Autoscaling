@@ -265,6 +265,7 @@ We are about to simulate a situation where our web server experiences high CPU u
 ![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/e0576e58-270f-4b99-a95d-52038722312e)
 
 Monitor your EC2 console following the execution of this command, and you will witness new instances being incorporated by the auto-scaling group to manage the simulated increase in traffic. If you halt or terminate the instance where CPU usage has been simulated, instances will be appropriately terminated from your auto-scaling group (scale-in).<p><p>
+
 ![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/357008fd-1e28-484b-ac04-bec302bad703)
 
 ## In conclusion
@@ -274,7 +275,7 @@ We have built and deployed a load-balancer and highly available web application 
 - Mawuli Denteh, AWS Lecturer, JOMACS IT Solutions and Service
 
 
-**N/B:**For errors and contributions, contact [link](Oseikwamejones@gmail.com)
+**N/B:**For errors and contributions, contact <a href="Oseikwamejones@gmail.com">link</a>
 
 
 
