@@ -99,13 +99,16 @@ The launch template acts as the framework for generating a specific server type 
 
 ### For Network Congurations:
 9. For Subnet, we won't include in the launch template.
+
+![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/e106e1df-23e9-4b3b-a4ec-5f6268ddcd3a)
+
 10. VPC, Select the **App-Autoscale-webserver VPC created**.
 11. Under Advanced network configuration, choose "Enable" under Auto-assign public IP
 
 ![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/50755a12-a32f-4bf9-93e3-e7d40c01f091)
 
 ### For Firewall (security groups):
-12. Create security group = "app-autoscale-webserver-sg" and Allow SSH and HTTP traffic from 0.0.0.0/0 (Ignore the warning about security group. We will edit it later). In the Description, enter **Allow both SSH and HTTP traffic**
+12. Create security group = **app-autoscale-webserver-sg** and Allow SSH and HTTP traffic from 0.0.0.0/0 (Ignore the warning about security group. We will edit it later). In the Description, enter **Allow both SSH and HTTP traffic**
 
 ![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/8e81791f-d9f3-4cb0-9545-f766f1e76799)
 
@@ -114,7 +117,26 @@ The launch template acts as the framework for generating a specific server type 
 ### For Storage Configurations
 13. Under Storage, leave all other configuration as default and choose "gp3" for Volume type.
 
-![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/4bdfb75c-66e0-4101-9dcd-1f620f770367)
+![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/ada1b295-5c50-4c51-a92e-ed79ef8f437b)
+
+14. Resource tags, enter this key-value pair. Key: Name, Value: app-autoscale-webserver. 
+
+![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/2fe2d13f-d5b9-4b13-89d2-991dce3134cb)
+
+15. For the Advanced details, scroll down to the User data section and enter the following lines of code exactly as shown:
+`#!/bin/bash -ex
+sudo su
+yum -y update
+yum install httpd -y
+systemctl start httpd
+systemctl enable httpd
+systemctl status httpd
+echo "<html>Hello World, welcome to my server</html>" > /var/www/html/index.html
+systemctl restart httpd
+amazon-linux-extras install epel -y
+yum install stress -y`
+
+
 
 
 
