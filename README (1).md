@@ -261,10 +261,10 @@ Under the existing design, users have direct access to our web server, which is 
 6. You should no longer be able to access your web server using the server IPs or DNS names. You should now be able to use the load balancer DNS name to access the servers. Test this out.
 
 # Live Autoscaling Test
-We are about to simulate a situation where our web server experiences high CPU usage to observe the response of the auto-scaling group. By connecting via SSH to our server, we will execute a command to stress the server, causing the CPU usage across our auto-scaling group to exceed 50%. In turn, the auto-scaling group will dynamically respond by deploying additional servers until the maximum specified server limit is reached.
+We are about to simulate a situation where our web server experiences high CPU usage to observe the response of the auto-scaling group. By connecting via SSH to our server, we will execute a command to stress the server, causing the CPU usage across our auto-scaling group to exceed 50%. In turn, the auto-scaling group will dynamically respond by deploying additional servers until the maximum specified server limit is reached.<p><p>
 ![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/e0576e58-270f-4b99-a95d-52038722312e)
 
-Monitor your EC2 console following the execution of this command, and you will witness new instances being incorporated by the auto-scaling group to manage the simulated increase in traffic. If you halt or terminate the instance where CPU usage has been simulated, instances will be appropriately terminated from your auto-scaling group (scale-in).<p><p>
+Monitor your EC2 console following the execution of this command, and you will witness new instances being incorporated by the auto-scaling group to manage the simulated increase in traffic. If you halt or terminate the instance where CPU usage has been simulated, instances will be appropriately terminated from your auto-scaling group (scale-in).
 
 ![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/357008fd-1e28-484b-ac04-bec302bad703)
 
@@ -275,7 +275,7 @@ We have built and deployed a load-balancer and highly available web application 
 - Mawuli Denteh, AWS Lecturer, JOMACS IT Solutions and Service
 
 
-**N/B:**For errors and contributions, contact <a href="Oseikwamejones@gmail.com">link</a>
+**N/B:**For errors and contributions, contact [oseikwamejones]("Oseikwamejones@gmail.com")
 
 
 
