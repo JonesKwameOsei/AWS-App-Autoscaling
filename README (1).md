@@ -238,11 +238,45 @@ The auto scaling group configures and controls how your application scales autom
 ![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/b91a9980-74b2-447b-9882-c9ac1df23cf4) <p>
 
 #### Auto scaling group created and our 2 instances are launched as shown in the images below: <p>
-![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/a2ff7414-d000-45b3-9fc0-5018a2201dec)
-![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/4b981b37-1459-431f-9ed1-31c0c188be54)
+![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/941abee4-0482-4805-8087-055d5dfee6d2)
+![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/753ceb30-b5df-4628-bc9a-43909029954b)
 
 # Testing the Web Server
 Click on one of the web servers, copy the public IP (IPV4) or DNS name and paste it in the browser. You should see the following content:
+![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/894349a4-0800-48ef-95ff-5aacfa85b2cd)
+
+This is a verification that the apache web server is running and our application is able to reach it from the internet. 
+
+# Restrict web traffic to serversRestrict web traffic to servers
+Under the existing design, users have direct access to our web server, which is not desired. Hence, the introduction of a load balancer. To confine incoming HTTP traffic destined for our servers exclusively to the load balancer, we must modify the security group of the web servers. This adjustment ensures that no requests reach our servers unless they have passed through the load balancer first.<p><p>
+1. Go to the autoscale-webserver-sg security group and click on "Edit inbound rules".
+2. Delete the existing HTTP rule.
+![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/796ae69e-991a-4547-90da-f0f540135def)
+
+3. Add a new HTTP rule. In the Source box, scroll down to select the security group of the load balancer. Save rules.<p><p>
+![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/aacc5bfe-0b87-4d6f-8cf1-f51217890c87)
+![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/b0ba3b5a-63df-418c-a088-0104c872bf03)
+
+5. You have successfully restricted traffic going to the servers to the load balancer.
+6. You should no longer be able to access your web server using the server IPs or DNS names. You should now be able to use the load balancer DNS name to access the servers. Test this out.
+
+# Live Autoscaling Test
+We are about to simulate a situation where our web server experiences high CPU usage to observe the response of the auto-scaling group. By connecting via SSH to our server, we will execute a command to stress the server, causing the CPU usage across our auto-scaling group to exceed 50%. In turn, the auto-scaling group will dynamically respond by deploying additional servers until the maximum specified server limit is reached.
+![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/e0576e58-270f-4b99-a95d-52038722312e)
+
+Monitor your EC2 console following the execution of this command, and you will witness new instances being incorporated by the auto-scaling group to manage the simulated increase in traffic. If you halt or terminate the instance where CPU usage has been simulated, instances will be appropriately terminated from your auto-scaling group (scale-in).<p><p>
+![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/357008fd-1e28-484b-ac04-bec302bad703)
+
+## In conclusion
+We have built and deployed a load-balancer and highly available web application that auto scales out based on the utilisation of a target CPU. 
+
+## Acknowledgement
+- Mawuli Denteh, AWS Lecturer, JOMACS IT Solutions and Service
+
+
+**N/B:**For errors and contributions, contact [link](Oseikwamejones@gmail.com)
+
+
 
 
 
