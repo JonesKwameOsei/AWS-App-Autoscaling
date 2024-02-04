@@ -105,6 +105,7 @@ The launch template acts as the framework for generating a specific server type 
 
 10. VPC, Select the **App-Autoscale-webserver VPC created**.
 11. Under Advanced network configuration, choose "Enable" under Auto-assign public IP <p>
+
 ![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/f2853988-8f4b-4985-b9ef-e9367c9b6583)
 
 ![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/50755a12-a32f-4bf9-93e3-e7d40c01f091)
