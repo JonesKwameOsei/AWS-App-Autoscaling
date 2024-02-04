@@ -141,9 +141,6 @@ amazon-linux-extras install epel -y
 yum install stress -y
 ```
 
-![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/e7ad71ae-a8ac-49a2-9e18-ed16601783c2)
-
-
 Launch Template created! Click **View Launch Template**
 ![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/f40072fe-f881-4d62-a737-3580effbe1bc) <p>
 ![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/ec9c2553-d872-402b-9f63-e6aa17a1edc2)
@@ -166,6 +163,29 @@ A target group is responsible for directing requests to the web servers we estab
 ![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/77ba54f0-8683-4d0c-8af1-16864a699425) <p>
 9. Click **Create Target Group**
 ![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/5fede922-2929-4c38-8cc3-5a1a83747520)
+
+# Create Load Balancer
+The application load balancer serves as the primary access point for directing traffic to our web servers. Rather than users accessing our application directly, the load balancer is utilised to distribute traffic across our autoscaling group of web servers evenly. This approach enhances load management, security, and the overall reliability of our application. Here, we will: <p>
+1. Click on Create load balancer from the EC2 console to create a load balancer. <p>
+![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/e7b87337-dc9f-482b-a400-4bbba4703020)
+
+2. Enter: **"App-Load-Balancer**.
+3. Scheme: **Internet-facing**.
+4. IP address type: **IPV4**. <p>
+![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/1ce60387-35eb-49f4-ae1d-88afa9387cdc)
+
+5. VPC: We will select the VPC we created.
+6. Mappings: Check the box beside the two AZs listed.<p>
+![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/558a5ae2-8250-4597-a088-4f10ea270fc1)
+
+7. Subnet: For each AZ selected, choose the public subnet in the dropdown menu
+8. At this point, go to the Security groups console and create a new security group for the load balancer. The inbound rule should allow HTTP traffic from anywhere.
+9. Select this security group as the load balancer security group
+10. Listeners and routing: Leave protocol and port as HTTP:80. Select the target group you created as target group. <p>
+![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/082e1f58-7b8c-4707-9584-beac2a8977d9)
+
+11. Leave every other configuration as default, review and click Create load balancer. <p>
+![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/e2f086f0-bb3d-4561-a2d5-5fa8305491b9)
 
 # Create Auto Scaling Group
 The auto scaling group configures and controls how your application scales automatically in response to varying traffic situations.<p>
