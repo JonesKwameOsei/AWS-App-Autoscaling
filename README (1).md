@@ -195,8 +195,13 @@ The auto scaling group configures and controls how your application scales autom
 ![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/017905d7-6d68-4829-921f-ce3979de7651)
 17. Add tags - optional (Skipped). Then click **Next**.<p>
 ![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/d7bd31dd-2762-4152-a785-96f0cf286bab)
+![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/565bb991-c0dd-495a-9aba-71759a82e5d9)
 
-18. Create Auto Scaling Group
+19. Review and create Auto Scaling Group. <p>
+![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/292de910-ddd6-4cfc-917f-bbe012f00289)
+![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/b91a9980-74b2-447b-9882-c9ac1df23cf4)
+
+
 
 
 
