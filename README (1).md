@@ -127,7 +127,8 @@ The launch template acts as the framework for generating a specific server type 
 ![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/2fe2d13f-d5b9-4b13-89d2-991dce3134cb)
 
 15. For the Advanced details, scroll down to the User data section and enter the following lines of code exactly as shown:
-```#!/bin/bash -ex
+```
+#!/bin/bash -ex
 sudo su
 yum -y update
 yum install httpd -y
