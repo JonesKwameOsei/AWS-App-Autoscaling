@@ -52,7 +52,20 @@ To Create a VPC, we follow these steps:
 
 ![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/c81cbc4f-5b31-4f6f-ab0b-5000b2386fe2)
 
-12. Next, select **Create VPC**
+12. Next, select **Create VPC**.
+
+![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/9b6cc62d-f97c-4f64-a172-935fd0598d9e)
+
+Finally, VPC is created! Click **View VPC**.
+
+![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/6b5d234d-dd12-4bd1-aef6-d0c725cc09da)
+
+We now have our **App-Autoscale-webserver VPC created with its *Resource Map** below. 
+
+![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/cabc5ae8-2ee7-4df2-b757-8b9aef3dc239)
+
+![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/23f8d9b9-0227-4888-89c3-3ff1d2ff52c7)
+
 
 
 
