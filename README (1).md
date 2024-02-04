@@ -152,7 +152,9 @@ A target group is responsible for directing requests to the web servers we estab
 ![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/5f94235d-ee9c-48a1-9630-5ff318f347ce) <p>
 
 2. Choose a target type: **Instances**.<p><p>
+
 ![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/7b1aa053-65ef-43b9-9c14-d115480d69ab) <p>
+
 3. Target group name: **app-autoscale-webserver** 
 4. Protocol: **HTTP**
 5. Port: **80**
