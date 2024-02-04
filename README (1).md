@@ -141,7 +141,67 @@ Launch Template created! Click **View Launch Template**
 ![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/ec9c2553-d872-402b-9f63-e6aa17a1edc2)
 
 # Create Target Group 
-A target group is responsible for directing requests to the web servers we establish. The load balancer relies on this target group to determine the specific set of servers to distribute traffic to. Additionally, our auto scaling group will be linked to this target group, ensuring that it launches our servers into the designated target group.
+A target group is responsible for directing requests to the web servers we establish. The load balancer relies on this target group to determine the specific set of servers to distribute traffic to. Additionally, our auto scaling group will be linked to this target group, ensuring that it launches our servers into the designated target group. <p>
+1. Click on Create target group from the EC2 console to create a target group <p>
+![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/5f94235d-ee9c-48a1-9630-5ff318f347ce) <p>
+2. Choose a target type: **Instances**.<p>
+![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/7b1aa053-65ef-43b9-9c14-d115480d69ab) <p>
+3. Target group name: **app-autoscale-webserver** 
+4. Protocol: **HTTP**
+5. Port: **80**
+6. VPC: Select the **app-autoscale-webserver VPC** we created earlier.
+7. We will leave every other value on this page as default.<p>
+![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/2a50e04d-a3e5-4f6b-993d-d39584b61dfe) <p>
+9. Click **Next**
+![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/025df5a2-6f24-4339-805f-09bc27f29f5f) <p>
+8. Register Targets: Leave as is.<p>
+![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/77ba54f0-8683-4d0c-8af1-16864a699425) <p>
+9. Click **Create Target Group**
+![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/5fede922-2929-4c38-8cc3-5a1a83747520)
+
+# Create Auto Scaling Group
+The auto scaling group configures and controls how your application scales automatically in response to varying traffic situations.<p>
+1. Click on Create Auto Scaling group from the EC2 console to create an auto scaling group. <p>
+![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/a0dad026-82a2-4600-a1d5-ec6bcefeed01) <p>
+2. Enter a name, **Webserver-autoscale** <p>
+2a. Choose the launch template you created. <p>
+![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/66e551df-2dac-4439-a24b-d0d45e642b8e) <p>
+![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/b273e758-fe77-4472-a49e-5c1fcb4339b1)
+
+3. Then, Click Next
+4. Select your webserver VPC created from the VPC step. <p>
+5. Under Availability Zones and subnets, select the two public subnets in your VPC, in different AZs.Then, Click Next. <p>
+![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/a0f76b41-4ae5-4b8a-abd8-5839adce2806)
+
+*NB:* Note that the launch template can be overwritten by using the auto scaling group to override the instance type config from Under Load balancing. 
+6. Choose the option **Attach to an existing load balancer**.
+7. Select **Choose from your load balancer target groups**.
+8. Select the **target group we created**.<p>
+![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/57fac182-d7ba-4eae-84ba-4868109ccaeb)
+
+9. Select VPC Lattice service to attach: **No VPC Lattice service**.
+10. Additional health check types - optional: **Turn on Elastic Load Balancing health checks**.
+11. Leave every other config as default. Set Health check grace periodHealth check grace period to **2**.<p>
+![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/c1f5d7f3-c9c6-497c-a4bf-de1168e2a5d3) <p>
+12. Then, click **Next**
+13. Group size: Desired: "2", Minimum: "1", Maximum: "4". <p>
+![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/a77d1921-4024-44c3-80f0-000a35074904)
+
+14. Scaling policies: "Target Tracking Policy"
+15. Metric type: "Average CPU Utilization"
+15. Target Value: "50%"
+16. Add notifications - optional (Skipped). Then click **Next** <p>
+![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/0e46abe0-ddf2-42ce-8a1f-cf4f9ce1ac2c)
+![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/017905d7-6d68-4829-921f-ce3979de7651)
+17. Add tags - optional (Skipped). Then click **Next**.<p>
+![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/d7bd31dd-2762-4152-a785-96f0cf286bab)
+
+18. Create Auto Scaling Group
+
+
+
+
+
 
 
 
