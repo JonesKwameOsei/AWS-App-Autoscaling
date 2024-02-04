@@ -136,6 +136,14 @@ systemctl restart httpd
 amazon-linux-extras install epel -y
 yum install stress -y`
 
+Launch Template created! Click **View Launch Template**
+![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/f40072fe-f881-4d62-a737-3580effbe1bc) <p>
+![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/ec9c2553-d872-402b-9f63-e6aa17a1edc2)
+
+# Create Target Group 
+A target group is responsible for directing requests to the web servers we establish. The load balancer relies on this target group to determine the specific set of servers to distribute traffic to. Additionally, our auto scaling group will be linked to this target group, ensuring that it launches our servers into the designated target group.
+
+
 
 
 
