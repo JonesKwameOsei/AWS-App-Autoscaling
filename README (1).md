@@ -155,13 +155,15 @@ A target group is responsible for directing requests to the web servers we estab
 4. Protocol: **HTTP**
 5. Port: **80**
 6. VPC: Select the **app-autoscale-webserver VPC** we created earlier.
-7. We will leave every other value on this page as default.<p>
+7. We will leave every other value on this page as default. <p><p>
 ![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/2a50e04d-a3e5-4f6b-993d-d39584b61dfe) <p>
-9. Click **Next**
+
+8. Click **Next**
 ![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/025df5a2-6f24-4339-805f-09bc27f29f5f) <p>
-8. Register Targets: Leave as is.<p>
+
+9. Register Targets: Leave as is.<p>
 ![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/77ba54f0-8683-4d0c-8af1-16864a699425) <p>
-9. Click **Create Target Group**
+10. Click **Create Target Group**
 ![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/5fede922-2929-4c38-8cc3-5a1a83747520)
 
 # Create Load Balancer
@@ -176,9 +178,9 @@ The application load balancer serves as the primary access point for directing t
 
 5. VPC: We will select the VPC we created.
 6. Mappings: Check the box beside the two AZs listed.<p>
+7. Subnet: For each AZ selected, choose the public subnet in the dropdown menu. <p>
 ![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/558a5ae2-8250-4597-a088-4f10ea270fc1)
 
-7. Subnet: For each AZ selected, choose the public subnet in the dropdown menu
 8. At this point, go to the Security groups console and create a new security group for the load balancer. The inbound rule should allow HTTP traffic from anywhere.
 9. Select this security group as the load balancer security group
 10. Listeners and routing: Leave protocol and port as HTTP:80. Select the target group you created as target group. <p>
