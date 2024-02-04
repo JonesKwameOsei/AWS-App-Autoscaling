@@ -18,6 +18,8 @@ To Create a VPC, we follow these steps:
 
 ![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/1bb6a2d8-8ce1-41dd-8e99-08eeae7f37b2)
 
+1a. Resource tags: Key: Name, Value: autoscale-webserver.
+
 2. In the Dashboard, select **Ctreate VPC**
 
 ![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/eb635546-db5f-4c15-b5a0-549d8e1edd1a)
@@ -65,6 +67,56 @@ We now have our **App-Autoscale-webserver VPC created with its *Resource Map** b
 ![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/cabc5ae8-2ee7-4df2-b757-8b9aef3dc239)
 
 ![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/23f8d9b9-0227-4888-89c3-3ff1d2ff52c7)
+
+# Create a Launch Template from Ec2<p><p>
+The launch template acts as the framework for generating a specific server type tailored to fulfill our web server requirements. It allows for adjustments to be made, facilitating the creation of new versions when configuration changes are necessary. 
+1. Click on Create launch template from the EC2 console to create a new launch template.
+
+![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/fce65dfd-822a-4248-b6a5-730dbd3587a0)
+
+2. Launch template name - required = "app-autoscale-webserver".
+
+![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/bf65a19a-f9dd-4138-91f7-ff3633f666bb)
+
+3. Check the Provide guidance to help me set up a template that I can use with EC2 Auto Scaling box.
+
+![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/294cb6ca-bf35-4b68-b07a-2cd49aba8f10)
+
+5. Under Application and OS Images (Amazon Machine Image) - required, choose **Amazon Linux 2023 AMI 2023.3.20240131.0 x86_64 HVM kernel-6.1**.
+6. We will leave the **Architecture** on **64-bit (x86). 
+
+![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/24684a89-cebc-4b41-9ad9-c467ad64e28d)
+
+7. Select **t2.micro** for the instance type.
+
+![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/8faba772-31ca-43dc-9949-d846bf7878bf)
+
+8. Key pair - Create a new one or use existing key pair since we will be connecting to our instance through a secure shell.
+
+![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/7b2f6ba4-e170-46e5-aff5-fc135fa008c1)
+
+![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/bf1ba860-dc5f-4776-aa0a-a390119200a0)
+
+### For Network Congurations:
+9. For Subnet, we won't include in the launch template.
+10. VPC, Select the **App-Autoscale-webserver VPC created**.
+11. Under Advanced network configuration, choose "Enable" under Auto-assign public IP
+
+![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/50755a12-a32f-4bf9-93e3-e7d40c01f091)
+
+### For Firewall (security groups):
+12. Create security group = "app-autoscale-webserver-sg" and Allow SSH and HTTP traffic from 0.0.0.0/0 (Ignore the warning about security group. We will edit it later). In the Description, enter **Allow both SSH and HTTP traffic**
+
+![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/8e81791f-d9f3-4cb0-9545-f766f1e76799)
+
+![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/ded117cb-760a-4740-9028-b9adc4a95f39)
+
+### For Storage Configurations
+13. Under Storage, leave all other configuration as default and choose "gp3" for Volume type.
+
+![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/4bdfb75c-66e0-4101-9dcd-1f620f770367)
+
+
 
 
 
