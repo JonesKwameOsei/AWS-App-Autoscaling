@@ -276,7 +276,7 @@ We have built and deployed a load-balancer and highly available web application 
 - Mawuli Denteh, AWS Lecturer, JOMACS IT Solutions and Service
 
 
-**N/B:**For errors and contributions, contact [oseikwamejones]("Oseikwamejones@gmail.com")
+**N/B:**For errors and contributions, contact [oseikwamejones@gmail.com]("Oseikwamejones@gmail.com")
 
 
 
