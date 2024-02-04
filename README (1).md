@@ -263,7 +263,7 @@ Under the existing design, users have direct access to our web server, which is 
 
 # Live Autoscaling Test
 We are about to simulate a situation where our web server experiences high CPU usage to observe the response of the auto-scaling group. By connecting via SSH to our server, we will execute a command to stress the server, causing the CPU usage across our auto-scaling group to exceed 50%. In turn, the auto-scaling group will dynamically respond by deploying additional servers until the maximum specified server limit is reached.<p><p>
-![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/e0576e58-270f-4b99-a95d-52038722312e)
+![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/2c513ea9-8340-466a-a308-936b7b2d76dc)
 
 Monitor your EC2 console following the execution of this command, and you will witness new instances being incorporated by the auto-scaling group to manage the simulated increase in traffic. If you halt or terminate the instance where CPU usage has been simulated, instances will be appropriately terminated from your auto-scaling group (scale-in).
 
