@@ -95,7 +95,8 @@ The launch template acts as the framework for generating a specific server type 
 
 ![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/7b2f6ba4-e170-46e5-aff5-fc135fa008c1)
 
-![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/bf1ba860-dc5f-4776-aa0a-a390119200a0)
+![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/8c4d62b0-31b1-4e09-a005-5fa123e7cebc)
+
 
 ### For Network Congurations:
 9. For Subnet, we won't include in the launch template.
@@ -103,7 +104,8 @@ The launch template acts as the framework for generating a specific server type 
 ![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/e106e1df-23e9-4b3b-a4ec-5f6268ddcd3a)
 
 10. VPC, Select the **App-Autoscale-webserver VPC created**.
-11. Under Advanced network configuration, choose "Enable" under Auto-assign public IP
+11. Under Advanced network configuration, choose "Enable" under Auto-assign public IP <p>
+![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/f2853988-8f4b-4985-b9ef-e9367c9b6583)
 
 ![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/50755a12-a32f-4bf9-93e3-e7d40c01f091)
 
