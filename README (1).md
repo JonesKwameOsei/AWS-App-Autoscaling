@@ -124,7 +124,7 @@ The launch template acts as the framework for generating a specific server type 
 ![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/2fe2d13f-d5b9-4b13-89d2-991dce3134cb)
 
 15. For the Advanced details, scroll down to the User data section and enter the following lines of code exactly as shown:
-`#!/bin/bash -ex
+```#!/bin/bash -ex
 sudo su
 yum -y update
 yum install httpd -y
@@ -134,7 +134,10 @@ systemctl status httpd
 echo "<html>Hello World, welcome to my server</html>" > /var/www/html/index.html
 systemctl restart httpd
 amazon-linux-extras install epel -y
-yum install stress -y`
+yum install stress -y```
+
+![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/e7ad71ae-a8ac-49a2-9e18-ed16601783c2)
+
 
 Launch Template created! Click **View Launch Template**
 ![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/f40072fe-f881-4d62-a737-3580effbe1bc) <p>
@@ -199,7 +202,15 @@ The auto scaling group configures and controls how your application scales autom
 
 19. Review and create Auto Scaling Group. <p>
 ![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/292de910-ddd6-4cfc-917f-bbe012f00289)
-![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/b91a9980-74b2-447b-9882-c9ac1df23cf4)
+![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/b91a9980-74b2-447b-9882-c9ac1df23cf4) <p>
+
+#### Auto scaling group created and our 2 instances are launched as shown in the images below: <p>
+![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/a2ff7414-d000-45b3-9fc0-5018a2201dec)
+![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/4b981b37-1459-431f-9ed1-31c0c188be54)
+
+# Testing the Web Server
+Click on one of the web servers, copy the public IP (IPV4) or DNS name and paste it in the browser. You should see the following content:
+
 
 
 
