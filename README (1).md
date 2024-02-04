@@ -49,6 +49,7 @@ To Create a VPC, we follow these steps:
 ![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/e5a600ba-18e0-4de2-a2cc-c92f0c1ea45f)
 
 10. Other remaining settings should be left as **Default**.
+
 ![image](https://github.com/JonesKwameOsei/AWS-App-Autoscaling/assets/81886509/c81cbc4f-5b31-4f6f-ab0b-5000b2386fe2)
 
 12. Next, select **Create VPC**
