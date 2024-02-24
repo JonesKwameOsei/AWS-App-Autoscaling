@@ -274,10 +274,10 @@ Monitor your EC2 console following the execution of this command, and you will w
 We have built and deployed a load-balancer and highly available web application that auto scales out based on the utilisation of a target CPU. 
 
 ## Acknowledgement
-- Mawuli Denteh, AWS Lecturer, JOMACS IT Solutions and Service
+This project was inspired by Mawuli Denteh, JOMACS IT Solutions and Service. I would like to say thank you to him for all the guidance and support. 
 
 
-**N/B:**For errors and contributions, contact [oseikwamejones@gmail.com]("Oseikwamejones@gmail.com")
+**N/B:** For errors and contributions, contact [oseikwamejones@gmail.com]("Oseikwamejones@gmail.com")
 
 
 
