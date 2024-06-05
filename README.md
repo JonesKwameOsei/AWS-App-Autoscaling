@@ -1,8 +1,7 @@
 
 # Creating a load-balanced Web Server with Auto Scaling.
 
-This is a structured training on AWS. AWS Auto Scaling monitors applications and automatically adjusts capacity to maintain steady, predictable performance at the lowest possible cost.
-
+AWS Auto Scaling is a service provided by Amazon Web Services that allows users to automatically adjust the capacity of their applications in order to maintain consistent and predictable performance while minimizing costs. This is achieved through the monitoring of various metrics and the automatic scaling of resources such as EC2 instances, ECS tasks, DynamoDB tables, and more. By using AWS Auto Scaling, users can ensure that their applications are able to handle fluctuations in demand without over-provisioning resources, ultimately leading to cost savings and improved performance. 
 
 ## Overview
 This project seeks to expose cloud engineers and soultions architects through the methodology of creating a web server that is well managed by an auto scaling group. With a launch template, the auto scaling group launches the server into a target group where an internet-facing load balancer directs traffic to the target group. 
